@@ -1,0 +1,131 @@
+/*This is a comment in CSS*/
+/*CSS applies styles from top to bottom. Lower has higher priority*/
+/*Since in HTML page link tag is written above style tag and inline css. first it obeys css of external file.Then it checks for chnages in style tag and then inline*/
+/*class and ID selectors can override element selectors.ID has higher priority than class*/
+
+/*CSS Variables*/
+:root{
+    --main-color : red;
+    --bgcolor : #B2D8CE;
+}
+
+
+*{
+    color: var(--main-color); /*universal selector to set default foreground color as red but overridden by seperately give*/
+    text-decoration: none;
+}
+body
+{
+    background-color: var(--bgcolor);
+   
+}
+header{
+    background-color: rgba(226, 147, 244, 0.7);
+    background-image: url("https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSrJKdB6-ugrz_niV00BfApx9sw2Rb34_7Vw__4a-zvn95CuvcVtJjs-irirzhN2SLTbI71fKWGjnQX0eU");
+    background-size:contain;/*COVER- no empty space, fill it entirely but entire image may not be seen. CONTAIN - completely fit but priority is that image is completely fit.Also image may repeat. AUTO - default case*/
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: scroll; /*specify whether background image attached should move or not when we scroll down.If set fixed it can stay im the screen we see even if we scroll down.*/
+}
+footer
+{
+    background-color:rgb(139, 139, 208,0.7) ;
+}
+button
+{
+    color: /*red;*/blue;
+    background-color: rgb(25, 169, 169);
+     opacity:0.8; /*for transperancy in both parent and child. Ranges from 0 to 1 (1=full color)*/
+     
+}
+h3
+{
+    font-weight:600; /*how darker or lighter the text should be.Range from 100-900*/
+    font-family:Georgia, 'Times New Roman', Times, serif; /*alternative fonts in different browsers.Ordered in basis of priority*/
+    color: blueviolet;
+    font-style: italic;
+    font-size:larger;
+
+
+}
+h4
+{
+    color: rgb(5, 12, 18, 0.5); /*instead of giving opacity we can give rgba(alpha channel)*/
+}
+/*h4{
+    color: red;
+}*/
+.sec 
+{
+    color: black;
+    text-align:right ; /*text alignment like jusify in making presentation. Works with respect to parent element*/
+    text-decoration:overline red wavy;
+}
+#home
+{
+    color: blue;
+    font-family: cursive;
+}
+#header_about
+{
+    text-decoration: none;
+    
+    
+}
+#about
+{
+    font-variant: small-caps;
+}
+main
+{
+    font-size: 10px;
+}
+#lorem_text1
+{
+    font-size: 15px; /*absolute control over fonts. Not mainly used when need to make responsive*/
+    text-indent: 30px; /*The text-indent property is used to specify the indentation of the first line of a text*/
+}
+#lorem_text2
+{
+    font-size: 2em;/*relative unit with respect to parent.Here main is the parent. 2em = 2*10 = 20px.Used to adjust font sizes*/
+    text-transform: capitalize;
+    letter-spacing: 10px; /*space between letters*/
+    width: 10em; /*width is considered realtive to font size- here fontsize = 2em=20px.Therefore width 10em = 20*10=200px*/
+}
+#lorem_text3
+{
+    font-size: 3rem; /*relative unit with respect to root parent.Always html is the parent and html font size=16px.3rem = 3*16 = 48px**/
+    text-transform: lowercase;
+    width: 50rem;/*50 rem = 50*16 = 800px*/
+    word-spacing: 15px; /*space between words*/
+}
+#lorem_text4
+{
+    font-size: 3vh; /*relative unit with respect to viewport.Viewport represent the screen size (width*height).Here 3vh = 3/100*669px = 3% of vh(669)=20.07px*/
+    line-height: 50px /*spcae between two lines*/
+}
+#lorem_text5
+{
+    font-size: 4vw; /*relative unit with respect to viewport.Viewport represent the screen size (width*height).Here 4vw = 4/100*543px = 4% of vw(543)=21.72px*/
+    text-align: justify;
+    text-shadow: 2px 2px 5px red; /*5px-horizontal 5px-vertical 5px-Blur effect color of shadow*/
+}
+#lorem_text6
+{
+    color: white;
+    font-size: 200%; /*relative unit with respect to parent.Here main is the parent. 200% = 20px.Used to adjust font sizes,width and height*/
+    text-shadow: 1px 1px 2px rgb(28, 17, 17), 0px  0px 25px blue,  0 0 5px darkblue;
+
+}
+/*
+
+- `text-indent`  - Provide Space before any text
+- `letter-spacing` - spacing between letters
+- `line-height` - height of text
+- `word-spacing` - spacing between words
+- `white-space: wrap,nowrap;` to wrap text when size of screen increases or decreases so that it automatically gets adjusted. If no wrap is applied it does no adjust and remain as it is when screen size decreases causing a scrollbar
+    
+    You can also apply text shadow
+
+
+*/

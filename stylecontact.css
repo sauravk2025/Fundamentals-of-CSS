@@ -1,0 +1,106 @@
+
+.headerdiv
+{
+    background-color: aquamarine;
+}
+.h1
+{
+    margin-right: 100px;
+
+}
+/* A pseudo-class is used to define a special state of an element. */
+a:link{
+    color: rgb(43, 35, 10);
+     /* unvisited link */
+}
+a:visited
+{
+    color: rgb(203, 212, 27);
+     /* a link the user has visited */
+}
+a:hover{
+    color: rgb(244, 167, 244);
+    /* a link when the user moves the mouses over it */
+}
+a:active
+{
+    color: rgb(32, 207, 129);
+    /* a link the moment it is clicked similar to onlclick */
+} 
+
+/*
+input : focus-visible{
+    //onclicking or while using input element what should happen
+}
+*/
+.container
+{
+    background-color: rgb(24, 8, 239);
+    height: 50px;
+    width: 100%; 
+    max-width: 600px;
+    min-width: 200px;
+    /*The box will take 100% width of its parent normally
+
+    But will never exceed 600px, even on large screens
+
+*/
+ 
+}
+.box
+{
+    background-color: rgb(171, 129, 218);
+    width: 200px;
+    text-align: center;
+    margin: auto; /*adjust the margin on both sides (left and right)to make this inner element to center.Does not include top and bottom  */
+    /* margin-left: 20%; this works but margin-top wont work as we think.It pulls whole of container box to bottom.This is bacause margin needlayout control (like flex or grid) to interpret vertical centering */
+    
+}
+.overflowtest
+{
+    background-color: rgb(164, 204, 144);
+    height: 100px;
+    width: 500px;
+    overflow-y:scroll;
+    overflow-x: auto;
+    
+    /* VISIBLE - default case, HIDDEN- hides the overflow within the height. SCROLL- adds a scrollbar within the height, AUTO - automatically adjust overflow. Overflow x- adjust the left right scroll bar,  */
+}
+div.sample
+{
+    background-color:red;
+}
+.position
+{
+    height: 90px;
+    background-color: rgb(112, 86, 86);
+    width: 100px;
+    border: 2px solid black;
+    margin-top: 20px;   
+    display: inline-block; 
+    
+}
+#b1
+{
+    top:50px; /*moves to a position 50px from where it was actually supposed to be. It can be negative or positive.Similar is the case of bottom,left and right*/
+    left: 50px;
+    position: relative;/*static is the default position and top,right or left will not work with position set as static.Relative means it shift its position relative to its initial position*/
+    z-index: 1; /*usually the components written first will go under and later on overlaps the earlier components(z-index:auto/0).To control it we use z-index. If z-index is set to positive (then that element overlpas. if negative then its priority decreases and go under. IT WON'T WORK IS POSITION IS STATIC.*/
+}
+#b2
+{
+    position:absolute; /*shift the position  with respect to closest ancestor which is non static or if such an ancestor does not exist it considers the body tag.Also affects page layout*/
+    top: 20px;
+}
+#b3
+{
+    position: fixed; /*positioned relative to the viewport or browser(body tag.it always stays in the same place even if the page is scrolled. even if page is scrolled it remains in it exact position .Also affects page layout*/
+    top: 20px;
+    left: 300px;
+}
+#b4
+{
+    position: sticky;
+    top:10px;/*it sticks when the distance between top most part of body or browser and box is 10px. And hereafter continues to stick-on even while scrolling and acts similar to fixed*/
+    z-index:-1;/*hence it will become transparent too.*/
+}

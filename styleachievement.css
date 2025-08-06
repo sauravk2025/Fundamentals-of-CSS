@@ -1,0 +1,165 @@
+.responsive
+{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+@media (width:600px){ /* at exactly 600px, box will be red*/
+.responsive {
+    background-color:blue;
+    }
+}
+
+@media(min-width:601px){ /* from 601px onwards box will be green. MIN-WIDTH REQUIRED TO CHANGE THE COLOR*/
+    .responsive{
+        background-color: green;
+        /* min width also adjust the size according to screen size. Here the minimum width is to be 100px and then increases when screen size increases*/
+    }
+}
+
+@media(max-width:400px){ /* from 0px till 400px box will be yellow. MAX-WIDTH UPTO WHICH THIS COLOR IS SHOWN*/
+    .responsive{
+        background-color: yellow;
+        /*max width adjust the size according to screen size. when size is less than 400px it shrinks according to screen which is not done in just width property.. and it also expands till screen size is 400px beyond which it stops expanding  */
+    }
+}
+@media(min-width:200px) and (max-width:300px) {
+    .responsive{
+        background-color: violet;
+    }
+    
+}
+
+.links
+{
+    background-color: orange;
+    color: rgb(165, 34, 34);
+    text-decoration: none;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+ 
+}
+a{
+ 
+    margin-left: 20px;
+    padding:20px 20px 20px 20px;
+   
+    text-align: center;
+    transition-property:all; /*TRANSITION helps to define the transition between two state like acitve,hover etc.ALL enables transitions*/
+    transition-duration: 2s; /*Takes 2 second to complete state change*/
+    transition-timing-function:steps(5); /*style of transition*/
+    transition-delay: 2s; /*after how long should the transition begin*/
+     /*shorthand- transition : property duration timing-function delay*/
+}
+a:hover{
+    background-color: black;
+    color: white;
+    transform: rotate(30deg);
+    transform: translate(20px,-20px); /*helps to move in x and y direction */
+    transform: skew(90deg) ;/*similar to applying shear force*/
+}
+
+@media(max-width:500px) {
+    .links{
+        flex-direction: column;
+}
+}
+
+.transform
+{
+    background-color: rgb(39, 193, 90);
+    height: 70px;
+    width: 87px;
+    margin: 20px 0 0 50px;
+    border: 1px solid black;
+    rotate: z 0deg;/*rotation we can make is with respect to z axis which is default*/
+    display: inline-block;
+    position: relative;
+    /* animation-name: percentage; */
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.transform:hover{
+    background-color: aqua;
+}
+.notransform
+{
+    background-color: yellow;
+    height: 70px;
+    width: 87px;
+    border: 1px solid black;
+     display: inline-block;
+     position: relative;
+   
+     z-index:-1;
+    /* transform: rotate(0deg); */
+    /*transform : translate(20px,20px)*/
+    ;/*apply to both x and y axis equally 2 times, seperately scale(2,1)*/
+    /* transition: ease-in;
+    transition-duration: 4s; */
+     animation-name:  myfirstanimation;
+     animation-duration: 2s;
+     animation-timing-function:ease-in;
+     animation-iteration-count: infinite;/*how many times animation should happen*/
+     animation-delay: 0;
+     animation-direction: alternate-reverse;/*reverse: change to to from and from to to. alternate means changing to and from intermittently*/
+     
+}   
+/* .notransform:hover{
+    transform: translate(100px);
+} */
+@keyframes myfirstanimation {
+    from{
+        left:0px;
+        transform: translate(0px);
+    }
+    to{
+        left: 900px;
+        transform: translate(20px,100px);
+    }
+}
+
+@keyframes percentage {
+    0%{ /*from start*/
+        font-size: 20px;
+    }
+    50% /*from middle*/
+    {
+        font-size: 60px;
+        background-color: blueviolet;
+    }
+    100%{/*end*/
+        font-size: 120px;
+    }
+    
+}
+
+.circle
+{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid rgb(56, 55, 51);
+    border-top: 10px solid rgb(51, 184, 199);
+    animation-name: rotatecircle;
+    animation-duration: 2s;
+    animation-timing-function:steps(60);
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes rotatecircle
+{
+    from{
+        rotate: 0deg;
+
+    }
+    to{
+        rotate: 360deg;
+    }
+}

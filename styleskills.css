@@ -1,0 +1,47 @@
+.gridcontainer
+{
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+    display: grid;
+    grid-template-columns:200px auto minmax(100px,auto); /* minmax(100px,auto) specifies the ,minimum value*/
+    grid-template-rows: 80px minmax(100px,auto) 300px; /*but setting size using px will not adjust according to screen size. To adjust the screen size according we set size use fr (fractions) .Its like we divide the entire box into equal parts*/
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(auto-fit,150px); /*3 rows each get 200px and adjust accordingly .There is also auto-fill*/ 
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    justify-content: center;
+    align-content: center;
+    
+    
+
+}
+.box
+{
+    background-color: red;
+    
+    text-align: center;
+    border: 1px solid black;
+}
+
+#b1
+{ /*count the lines from the start . here 6 lines in both column and rows. By using this we can specify the size of each grid box*/
+
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+#b2
+{
+    grid-row-start:2; 
+    grid-row-end:6;
+}
+#b3
+{   /*column start and column end*/
+    grid-column: 2/6; 
+}
+
+#b4
+{
+    grid-area:3/2/4/4 ; /*grid-row-start, grid-column-start, grid-row-end and the grid-column-end*/
+}

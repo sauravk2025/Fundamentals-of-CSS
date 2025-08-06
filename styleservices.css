@@ -1,0 +1,33 @@
+ul{
+    list-style-type: circle;
+}
+
+ol.a{
+    list-style-type:lower-roman;
+}
+ol.b
+{
+    list-style-image: url("https://talksport.com/wp-content/uploads/sites/5/2025/06/cristiano-ronaldo-portugal-celebrates-scoring-1000491335.jpg?strip=all&w=90");
+}
+ol.c
+{
+    list-style-type: none;
+}
+
+table , th,td{
+    width: 300px;
+    border-collapse:collapse; /*if set as SEPERATE(default) then th and td have seperate borders and hence the double borders*/
+    text-align: center;
+}
+th{
+    height: 50px;
+    border-bottom: 1px solid grey;
+}
+td{
+    height: 20px;
+    border-bottom: 1px solid grey;
+}
+tr:hover{
+    background-color: orange;
+    color: white;
+}

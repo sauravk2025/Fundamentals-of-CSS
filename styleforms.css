@@ -1,0 +1,19 @@
+input[type=text] /*select only the input type =text*/
+{
+    background-color: rgb(246, 195, 245);
+    height: 20px;
+    width: 100px;
+    border-radius: 2px;
+    padding: 14px;
+    border-style: none;
+    color: rgb(0, 0, 0);
+    transition-property:all;
+    transition-timing-function:ease;
+    transition-duration: 2s;
+  
+
+}
+input[type=text]:focus
+{
+    width:200px;
+}

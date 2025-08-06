@@ -1,0 +1,111 @@
+/*CSS Box Model
+Each COMPONENTS has a CONTENT which is the text or image. Each CONTENT has its HEIGHT and WIDTH. Then comes the BORDER. The space between CONTENT and BORDER is the PADDING. The space between two COMPONENTS or space between BORDERS of two different COMPONENTS is the MARGIN.If a component has only CONTENT, then MARGIN will be the distance  from CONTENTS of 2 COMPONENTS.*/
+
+#div1
+{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    background-color: red;
+    border-width: thick;
+    border-style: dotted solid double dashed;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#div2
+{
+    margin-top: 50px; /*Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.Here actually bottom+top = 50+20 = 70px. But due to margin collapse it is only 50px which is the greatest value among them*/
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    background-color: rgb(82, 65, 189);
+    border: 15px solid rgb(139, 173, 59);
+    border-radius: 1%; /*if width=height setting 50% will give a circle*/
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px; /*shorthand - top right bottom left - clockwise(no comma)*/
+    outline: 2px solid black; /*An outline is a line drawn outside the element's border.*/
+    outline-offset: 5px; /*adds a space between border and outline Will not affect other properties like margin.It is still considered from the border*/
+    
+}
+
+#div3
+{
+    margin-left: 20px;
+    margin-top: 100px;
+    background-color: aquamarine;
+    display: inline;/*there will be no margin(top/bottom) when display inline is set to a block element.If set to a inline element no change will be there since it is automatically an inline element*/
+    height: 100px;
+    width: 20px;
+    padding-top: 10px ;
+    /*I cannot set height and width for inline display property along with margin*/
+}
+#span1
+{
+    display: inline;
+    background-color: blueviolet;
+    height: 150px;
+    width: 20px;
+    margin-left:5px;
+    /*If display:inline is set to a inline element, I cannot set height and width for inline display property but i can set margin*/
+}
+#div4
+{
+    background-color: pink;
+    display:inline-block;
+    margin-left: 30px; /*This block element behaves as an inline element and stay in same line. Also we can set margin,height and width*/
+    height: 130px;
+    width: 200px;
+    margin-top:200px
+}
+
+#span2
+{
+   background-color: tomato; 
+   display: inline-block;
+   margin-left: 50px;
+   height: 250px;
+   width: 140px;
+   margin-top: 20px;
+   /*This inline element behaves as an inline element and stay in same line. Also we can set margin,height and width*/
+}
+#div5
+{
+    background-color: brown;
+    display: block; 
+    height: 50px;
+    width: 200px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /*Dsiplay block for block element lets you adjust height, width(default(100%) and margin as well*/
+}
+#span3
+{
+    background-color: yellow;
+    display: block;
+    height: 40px;
+    width: 500px;
+    margin-bottom: 20px
+    /*Dsiplay block for inline element lets you adjust height, width(default(100%) and margin as well*/
+
+}
+#div6
+{
+    background-color:green;
+    height: 20px;
+}
+#span4
+{
+    background-color: lawngreen;
+    height: 20px;
+    width: 40px;
+    margin-left: 20px;
+}
+#div7
+{
+    /* display: none; invisible and no space is reserved */
+    visibility: hidden; /*space will be reserved. but not visible*/
+}
